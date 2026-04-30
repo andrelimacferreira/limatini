@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 
@@ -11,6 +11,12 @@
 
 <!-- CANONICAL (resolve http vs https definitivamente) -->
 <link rel="canonical" href="https://limatini.eu/">
+
+<link rel="alternate" hreflang="pt-PT" href="https://limatini.eu/pt/" />
+<link rel="alternate" hreflang="es-ES" href="https://limatini.eu/es/" />
+<link rel="alternate" hreflang="it-IT" href="https://limatini.eu/it/" />
+<link rel="alternate" hreflang="en" href="https://limatini.eu/en/" />
+<link rel="alternate" hreflang="x-default" href="https://limatini.eu/" />
 
 <!-- ROBOTS -->
 <meta name="robots" content="index, follow">
@@ -66,7 +72,23 @@ h1 {
 </head>
 
 <body>
+
+<script>
+const lang = navigator.language.toLowerCase();
+
+if (lang.startsWith('pt')) {
+  window.location.href = '/pt/';
+} else if (lang.startsWith('es')) {
+  window.location.href = '/es/';
+} else if (lang.startsWith('it')) {
+  window.location.href = '/it/';
+} else {
+  window.location.href = '/en/';
+}
+</script>
+
 <h1>LIMATINI</h1>
+
 </body>
 
 </html>
